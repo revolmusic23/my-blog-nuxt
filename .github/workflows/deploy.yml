@@ -1,36 +1,56 @@
-# .github/workflows/deploy.yml
 name: Deploy
 on:
   push:
     branches: [master]
-  pull_request:
-    branches: [master]
+  workflow_dispatch: # 允許手動觸發
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 避免同時進行多個部署
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: npm # 加入 cache 可以加快建置速度
+          cache: npm
 
-      - name: Install Dependencies
-        run: npm install
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
-      # - name: Build
-      #   run: npm run build
-      - name: Generate Static Files
-        run: npm run generate # 改用 generate
+      - name: Install dependencies
+        run: npm ci # 使用 ci 而不是 install，確保乾淨安裝
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/master'
+      - name: Static HTML export with Nuxt
+        run: npm run generate
+        env:
+          NITRO_PRESET: github_pages # 這個環境變數很重要
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .output/public
+          path: .output/public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
