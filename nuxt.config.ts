@@ -1,6 +1,9 @@
-// nuxt.config.ts
 export default defineNuxtConfig({
   // 記得先在最上面引入所需的類型
+  app: {
+    baseURL: "/my-blog-nuxt/",
+    buildAssetsDir: "assets",
+  },
   devtools: { enabled: true },
   modules: ["@nuxt/content"],
   css: ["~/assets/css/main.css"],
