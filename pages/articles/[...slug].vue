@@ -1,6 +1,6 @@
 <!-- pages/articles/[...slug].vue -->
 <template>
-  <div class="max-w-4xl mx-auto">
+  <Card>
     <ContentDoc v-slot="{ doc }">
       <article class="prose prose-lg max-w-none">
         <h1>{{ doc.title }}</h1>
@@ -10,5 +10,5 @@
         <ContentRenderer :value="doc" />
       </article>
     </ContentDoc>
-  </div>
+  </Card>
 </template>

@@ -1,6 +1,7 @@
 <!-- pages/index.vue -->
 <template>
-  <div class="max-w-4xl mx-auto">
+  <!-- <div class="max-w-4xl mx-auto"> -->
+  <Card>
     <h1 class="text-4xl font-bold mb-8">歡迎來到我的部落格</h1>
 
     <!-- 最新筆記 -->
@@ -48,5 +49,5 @@
         查看所有文章 →
       </NuxtLink>
     </section>
-  </div>
+  </Card>
 </template>
