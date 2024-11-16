@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --primary: #d2b48c;
+  /* --primary: #F7F3F0; */
+  --primary-light: #e5d1b3;
+  --primary-dark: #a68b60;
+
+  /* #D19162 */
+
+  /* 或者用 RGB */
+  --primary-rgb: 210, 180, 140; /* 同樣的卡其色 */
+  --primary-light-rgb: 229, 209, 179;
+  --primary-dark-rgb: 166, 139, 96;
+
+  /* 輔助色系（深棕） */
+  --secondary: #8b7355; /* 深棕 */
+  --secondary-light: #a68b6c;
+  --secondary-dark: #6b563f;
+
+  /* 強調色（這裡用了一個比較活潑的色調作為對比） */
+  --accent: #e6a87c; /* 珊瑚橘 */
+
+  /* --background: #ffffff; */
+  /* --background: #f7f3f0; */
+  --bg-primary: #ffffff; /* 主背景，通常是白色 */
+  --bg-secondary: #f7f3f0; /* 次要背景，淺灰 */
+  --bg-card: #ffffff; /* 卡片背景 */
+  --bg-hover: #f0f0f0; /* hover 效果 */
+
+  --text-primary: #333333; /* 主要文字顏色（深灰） */
+  --text-secondary: #666666; /* 次要文字顏色（中灰） */
+  /* #8E8D8B */
+  --text-light: #999999; /* 淺色文字（淺灰） */
+  --text-dark: #000000; /* 深色文字（黑色） */
+}
+
+/* 深色主題 */
+.dark {
+  --background: #1f1f1f;
+  --text: #e5e5e5;
+  /* 其他顏色... */
+}
