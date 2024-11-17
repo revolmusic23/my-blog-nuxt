@@ -5,7 +5,8 @@
       <div class="flex justify-between items-center h-16">
         <NuxtLink
           to="/"
-          class="text-2xl font-bold text-text-primary hover:text-text-secondary transition-colors">
+          class="text-2xl font-bold text-text-primary hover:text-text-secondary transition-colors"
+        >
           MyBlog
         </NuxtLink>
 
@@ -15,19 +16,21 @@
             v-for="item in menuItems"
             :key="item.path"
             :to="item.path"
-            class="text-text-light hover:text-gray-200 transition-colors text-lg font-medium"
+            class="hover:text-primary transition-colors text-md tracking-wider"
             :class="{
               'border-b-2 border-white': route.path.includes(item.path),
-            }">
+            }"
+          >
             {{ item.name }}
           </NuxtLink>
         </div>
 
         <!-- 手機版選單按鈕 -->
         <button
-          class="md:hidden p-2 text-white"
+          class="md:hidden p-2"
           @click="isOpen = !isOpen"
-          aria-label="Menu">
+          aria-label="Menu"
+        >
           <div class="w-6 h-6 flex items-center justify-center">
             <svg
               v-if="!isOpen"
@@ -35,12 +38,14 @@
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              class="w-6 h-6">
+              class="w-6 h-6"
+            >
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16" />
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
             <svg
               v-else
@@ -48,12 +53,14 @@
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              class="w-6 h-6">
+              class="w-6 h-6"
+            >
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M6 18L18 6M6 6l12 12" />
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </div>
         </button>
@@ -68,7 +75,8 @@
             :to="item.path"
             class="block px-4 py-2 text-white hover:bg-[#C4A484] rounded-lg transition-colors"
             :class="{ 'bg-[#C4A484]': route.path.includes(item.path) }"
-            @click="isOpen = false">
+            @click="isOpen = false"
+          >
             {{ item.name }}
           </NuxtLink>
         </div>
@@ -85,6 +93,7 @@ const isOpen = ref(false);
 const menuItems = [
   { name: "筆記", path: "/notes" },
   { name: "文章", path: "/articles" },
+  { name: "作品集", path: "/works" },
 ];
 
 // 當視窗大小改變時關閉手機版選單
