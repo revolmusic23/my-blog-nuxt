@@ -31,7 +31,7 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Install dependencies
-        run: npm ci # 使用 ci 而不是 install，確保乾淨安裝
+        run: npm install
 
       - name: Static HTML export with Nuxt
         run: npm run generate
