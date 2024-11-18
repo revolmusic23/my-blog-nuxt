@@ -31,7 +31,8 @@ module.exports = {
         //   light: "rgb(var(--primary-light-rgb))",
         //   dark: "rgb(var(--primary-dark-rgb))",
         // },
-        secondary: "hsl(var(--secondary))",
+        secondary: "var(--secondary)",
+        accent: "var(--accent)",
 
         text: {
           primary: "var(--text-primary)", // 主要文字顏色
