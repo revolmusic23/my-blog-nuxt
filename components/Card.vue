@@ -1,5 +1,8 @@
 <template>
-  <div class="bg-bg-primary rounded-md shadow-md p-4" :class="cardClasses">
+  <div
+    class="bg-bg-primary rounded-md border-primary-200 shadow-md p-4"
+    :class="cardClasses"
+  >
     <slot />
   </div>
 </template>

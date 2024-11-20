@@ -1,6 +1,6 @@
 <!-- layouts/default.vue -->
 <template>
-  <div class="min-h-screen bg-bg-secondary">
+  <div class="min-h-screen bg-primary-50">
     <NavBar />
 
     <div class="container max-w-5xl mx-auto px-4 py-8">

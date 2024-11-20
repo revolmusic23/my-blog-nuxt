@@ -1,11 +1,10 @@
-<!-- components/NavBar.vue -->
 <template>
   <nav class="bg-bg-primary shadow-md">
     <div class="container mx-auto px-4 max-w-5xl">
       <div class="flex justify-between items-center h-16">
         <NuxtLink
           to="/"
-          class="text-2xl font-bold text-text-primary hover:text-text-secondary transition-colors"
+          class="text-2xl font-bold text-text-primary hover:text-primary-500 transition-colors tracking-wider"
         >
           MyBlog
         </NuxtLink>
@@ -16,9 +15,9 @@
             v-for="item in menuItems"
             :key="item.path"
             :to="item.path"
-            class="hover:text-primary transition-colors text-md tracking-wider"
+            class="hover:text-primary-400 transition-colors text-md tracking-wider"
             :class="{
-              'border-b-2 border-white': route.path.includes(item.path),
+              'text-primary-500': route.path.includes(item.path),
             }"
           >
             {{ item.name }}

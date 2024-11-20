@@ -6,7 +6,7 @@
   >
     <span>{{ text }}</span>
     <span
-      class="absolute bottom-0 left-0 h-1 bg-accent"
+      class="absolute bottom-0 left-0 h-1 bg-primary-500 z-10"
       :class="underlineWidth"
     ></span>
   </component>
