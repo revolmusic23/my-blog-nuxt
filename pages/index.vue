@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="bg-bg-secondary">
+    <div class="bg-primary-50">
       <div class="container mx-auto max-w-5xl py-8">
         <div class="flex items-center justify-between">
           <div>
@@ -30,6 +30,7 @@
                 v-for="item in list"
                 :key="item._path"
                 class="border shadow-sm"
+                hover-shadow
               >
                 <NuxtLink :to="item._path">
                   <h3 class="text-xl font-medium mb-2">{{ item.title }}</h3>
@@ -40,14 +41,47 @@
           </ContentList>
           <NuxtLink
             :to="section.path"
-            class="text-primary hover:underline mt-4 inline-block"
+            class="text-primary hover:underline mt-8 inline-block"
           >
-            查看所有{{ section.title }} →
+            <button
+              class="px-4 py-2 rounded-lg bg-primary-500 hover:bg-primary-600 text-white"
+            >
+              查看所有{{ section.title }} →
+            </button>
           </NuxtLink>
         </div>
       </div>
     </div>
   </div>
+
+  <div :class="[containerClass, 'py-8']">
+    <TitlesSectionTitle text="作品集" class="mb-6" />
+    <div class="gap-12 grid lg:grid-cols-3 md:grid-cols-2">
+      <div v-for="n in 6" :key="n">
+        <Card hover-shadow>
+          <img src="https://via.placeholder.com/300" alt="image" />
+          <div class="mt-4 text-center">
+            <h2 class="text-xl">Title</h2>
+            <p class="text-sm">Description</p>
+          </div>
+        </Card>
+      </div>
+    </div>
+    <div class="flex flex-col items-center">
+      <NuxtLink
+        to="/works"
+        class="text-primary hover:underline mt-8 inline-block"
+      >
+        <button
+          class="px-4 py-2 rounded-lg bg-primary-500 hover:bg-primary-600 text-white"
+        >
+          查看所有作品
+        </button>
+      </NuxtLink>
+    </div>
+  </div>
+
+  <div class="mb-8"></div>
 </template>
 
 <script setup lang="ts">
