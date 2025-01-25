@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "./article";
 
 :root {
   --primary: #d2b48c;

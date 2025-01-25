@@ -19,9 +19,9 @@
     </div>
   </div>
 
-  <div :class="[containerClass, 'py-8']">
+  <div :class="[containerClass, 'py-8', 'article home-article']">
     <TitlesSectionTitle text="關於我" class="mb-6" />
-    <p class="text-lg">一些關於我的事情。</p>
+    <ContentDoc path="/about" v-slot="{ doc }"></ContentDoc>
   </div>
 
   <!-- TODO: 音樂作品集 -->
