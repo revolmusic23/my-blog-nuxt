@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-bg-primary shadow-md">
+  <nav class="sticky top-0 bg-bg-primary shadow-md z-50">
     <div class="container mx-auto px-4 max-w-5xl">
       <div class="flex justify-between items-center h-16">
         <NuxtLink
@@ -90,9 +90,9 @@ const isOpen = ref(false);
 
 // 選單項目
 const menuItems = [
-  { name: "筆記", path: "/notes" },
+  // { name: "筆記", path: "/notes" },
   { name: "文章", path: "/articles" },
-  { name: "作品集", path: "/works" },
+  // { name: "作品集", path: "/works" },
 ];
 
 // 當視窗大小改變時關閉手機版選單

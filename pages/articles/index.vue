@@ -6,7 +6,8 @@
           <NuxtLink :to="article._path">
             <Card hover-shadow>
               <h2
-                class="text-xl text-text-primary font-semibold tracking-wide mb-2">
+                class="text-xl text-text-primary font-semibold tracking-wide mb-2"
+              >
                 {{ article.title }}
               </h2>
               <h2 class="text-gray-600 text-sm mt-4">{{ article.date }}</h2>
@@ -22,6 +23,6 @@
 
 <script setup lang="ts">
 const getArticleInfo = (article: any) => {
-  console.log(article);
+  // console.log(article);
 };
 </script>
