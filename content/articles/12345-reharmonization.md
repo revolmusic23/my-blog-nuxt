@@ -2,7 +2,8 @@
 title: 我只用「12345」做出了一段音樂
 date: "2025-01-25"
 description: "讓單調的旋律變得有趣。"
-slug: why-i-dont-like-windows
+slug: 12345-reharmonization
+navigation: 12345-reharmonization
 ---
 
 你會不會常常寫歌和弦進行都長得一樣，而覺得很單調？明明也學了很多和弦進行的招式，卻又不知道怎麼用出來？
@@ -16,12 +17,11 @@ slug: why-i-dont-like-windows
 
 這邊有一個非常簡單的 Do-Re-Mi-Fa-Sol 的旋律，你可以先暫停想想看你會怎麼配和弦。
 
-（照片）
+![12345 旋律](/12345-reharmonization/12345-melody-1.jpeg)
 
 如果是我自己沒有特別設計的情況，大概會這樣配：
 
-（照片）
-F G ....
+![12345 旋律](/12345-reharmonization/12345-bad.jpeg)
 
 其實聽起來就很正常、很順，完全可以發展成一首歌對吧？只是我會希望可以有一些不一樣的感覺。
 

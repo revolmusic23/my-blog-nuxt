@@ -3,8 +3,8 @@ title: 在 Git 裡面，怎麼把自己的分支 merge 進 main？
 date: "2024-07-18"
 tags: ["Git"]
 description: "每次多人協作，都有一堆分支衝突嗎？"
-# aside: false
-slug: how-to-merge-to-main
+slug: git-merge-branch-to-main
+draft: true
 ---
 
 簡單來說，分成三個階段：
