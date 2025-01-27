@@ -1,19 +1,25 @@
 <template>
   <div class="bg-primary-50">
     <div class="container mx-auto max-w-5xl py-8">
-      <div class="flex items-center justify-between">
+      <div
+        class="flex flex-col-reverse sm:flex-row items-center justify-between gap-8"
+      >
         <div>
-          <h1 class="text-4xl font-bold tracking-wider mb-8">
+          <h1
+            class="text-3xl md:text-4xl font-bold tracking-wider mb-4 md:mb-8"
+          >
             歡迎來到我的部落格
           </h1>
-          <p class="text-xl text-text-secondary tracking-wider">
+          <p
+            class="text-md md:text-xl text-center sm:text-left text-text-secondary tracking-wider"
+          >
             一個喜歡編曲的前端工程師
           </p>
         </div>
         <img
           src="/images/revolc-font-logo.jpeg"
           alt="User Avatar"
-          class="w-80 h-80 rounded-full"
+          class="w-60 h-60 md:w-80 md:h-80 rounded-full"
         />
       </div>
     </div>

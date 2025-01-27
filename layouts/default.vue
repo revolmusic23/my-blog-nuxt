@@ -4,7 +4,7 @@
     <NavBar />
 
     <div class="container max-w-5xl mx-auto px-4 py-8">
-      <div class="flex gap-6">
+      <div class="md:flex gap-6">
         <SideBar v-if="showSidebar" />
         <main class="flex-1">
           <slot />

@@ -3,6 +3,14 @@
 @tailwind utilities;
 @import "./article";
 
+html {
+  font-size: 16px;
+
+  @media (width <= 40rem) {
+    font-size: 15px;
+  }
+}
+
 :root {
   --primary: #d2b48c;
   /* --primary: #F7F3F0; */

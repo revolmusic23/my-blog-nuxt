@@ -1,6 +1,6 @@
 <template>
   <nav class="sticky top-0 bg-bg-primary shadow-md z-50">
-    <div class="container mx-auto px-4 max-w-5xl">
+    <div class="container mx-auto px-6 max-w-5xl">
       <div class="flex justify-between items-center h-16">
         <NuxtLink
           to="/"
@@ -15,7 +15,7 @@
             v-for="item in menuItems"
             :key="item.path"
             :to="item.path"
-            class="hover:text-primary-400 transition-colors text-md tracking-wider"
+            class="hover:text-primary-400 transition-colors text-base tracking-wider"
             :class="{
               'text-primary-500': route.path.includes(item.path),
             }"
@@ -72,8 +72,10 @@
             v-for="item in menuItems"
             :key="item.path"
             :to="item.path"
-            class="block px-4 py-2 text-white hover:bg-[#C4A484] rounded-lg transition-colors"
-            :class="{ 'bg-[#C4A484]': route.path.includes(item.path) }"
+            class="block px-4 py-2 hover:bg-[#C4A484] hover:text-white rounded-lg transition-colors"
+            :class="{
+              'bg-[#C4A484] text-white': route.path.includes(item.path),
+            }"
             @click="isOpen = false"
           >
             {{ item.name }}

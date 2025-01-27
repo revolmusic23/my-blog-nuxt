@@ -24,7 +24,7 @@
   h1 {
     font-size: 1.875rem;
     letter-spacing: 0.15rem;
-    margin-top: 1rem;
+    margin-top: 0.4rem;
   }
   h2 {
     font-size: 1.5rem;
@@ -45,6 +45,13 @@
   h6 {
     font-size: 1rem;
   }
+
+  @media (width <= 48rem) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+
   p {
     line-height: 1.8;
     margin: 1rem 0;
@@ -106,7 +113,7 @@
   } */
   img {
     margin: 2rem 0;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <aside
     v-if="route.path.includes('/articles') || route.path.includes('/notes')"
-    class="w-64 shrink-0 hidden md:block"
+    class="md:w-48 lg:w-64 shrink-0 hidden md:block"
   >
     <!-- <div class="sticky top-8 bg-bg-primary shadow-md rounded-lg p-4">
       <ContentNavigation v-slot="{ navigation }" path="/notes">
